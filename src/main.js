@@ -5,7 +5,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-fetch('/static/export.slim.json')
+fetch('static/export.slim.json')
   .then(res => res.json())
   .then(comics => {
     store.commit('setComics', comics.reverse())
